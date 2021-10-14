@@ -1,8 +1,10 @@
 package com.example.storageexample;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -18,6 +20,7 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
     private static final String FILE_PATH_TAG = "file_path";
 
+    @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
